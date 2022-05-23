@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model">
-      <change afterPath="$PROJECT_DIR$/api_test1/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_test1/urls.py" afterDir="false" />
+    <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication">
+      <change afterPath="$PROJECT_DIR$/api_test1/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_test1/pagination.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_test1/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_test1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_test1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_test1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_test1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sku-finder-plugin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +27,20 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="anujhsrsaini" />
+        <option name="repository" value="sku-finder-plugin" />
+      </RepoCoordinatesHolder>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652457023614</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created model&#10;authentication register api added">
+      <created>1652599839964</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652599839964</updated>
+    </task>
+    <task id="LOCAL-00003" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication">
+      <created>1653297020872</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653297020872</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,7 +101,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="API_TEST" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -79,6 +121,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created model" />
-    <option name="LAST_COMMIT_MESSAGE" value="created model" />
+    <MESSAGE value="created model&#10;authentication register api added" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication" />
   </component>
 </project>
