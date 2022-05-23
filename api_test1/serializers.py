@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Partner
+from .models import Inventory
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 
@@ -23,3 +24,19 @@ class RegisterSerializer(serializers.ModelSerializer):
         partner.save()
 
         return partner
+
+
+class InventorySerializer(serializers.ModelSerializer):  # create class to serializer model
+    partner = serializers.ReadOnlyField(source='partner.username')
+
+    class Meta:
+        model = Inventory
+        fields = ('id', 'product', 'partner', 'available', 'created_at', 'updated_at')
+
+
+class UserSerializer(serializers.ModelSerializer):  # create class to serializer user model
+    inventory = serializers.PrimaryKeyRelatedField(many=True, queryset=Inventory.objects.all())
+
+    class Meta:
+        model = Partner
+        fields = ('id', 'username', 'inventory')

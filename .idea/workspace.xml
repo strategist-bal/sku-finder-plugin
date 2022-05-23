@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_test1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_test1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,5 +111,16 @@
     <MESSAGE value="created model" />
     <MESSAGE value="created model&#10;authentication register api added" />
     <option name="LAST_COMMIT_MESSAGE" value="created model&#10;authentication register api added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_test1/models.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
