@@ -34,8 +34,20 @@ class InventorySerializer(serializers.ModelSerializer):  # create class to seria
         fields = ('id', 'product', 'partner', 'available')
 
 
+class PartnerSerializer(serializers.ModelSerializer):  # create class to serializer model
+    #partner = serializers.ReadOnlyField(source='partner.id')
+    #user_pk = serializers.Field(source='user.id')
+
+    class Meta:
+        model = Partner
+        #lookup_field = 'partner_id'
+        #fields = '__all__'
+        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'dob', 'shop_name', 'category',
+                  'address_line_1', 'address_line_2', 'address_line_3', 'latitude', 'longitude')
+
+
 class ProductSerializer(serializers.ModelSerializer):  # create class to serializer model
-    #partner = serializers.ReadOnlyField(source='partner.username')
+#    partner = serializers.ReadOnlyField(source='partner.username')
 
     class Meta:
         model = Product

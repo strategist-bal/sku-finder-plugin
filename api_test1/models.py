@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import UnicodeUsernameValidator
 from django.contrib.auth.models import UserManager
-from django import forms
+#from django import forms
 # Create your models here.
 
 

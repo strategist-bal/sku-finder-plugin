@@ -1,9 +1,10 @@
-from django.shortcuts import render
+#from django.shortcuts import render
 
-from django.http import HttpResponse
+#from django.http import HttpResponse
 
-from django.shortcuts import render
-from rest_framework.decorators import api_view
+#from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework import status
 #from .serializers import NoteSerializer
@@ -13,7 +14,7 @@ from rest_framework.permissions import IsAuthenticated
 from django_filters import rest_framework as filters
 from .models import Inventory, Product
 from .permissions import IsOwnerOrReadOnly
-from .serializers import InventorySerializer, ProductSerializer
+from .serializers import InventorySerializer, ProductSerializer, PartnerSerializer
 from .pagination import CustomPagination
 from .filters import InventoryFilter
 
@@ -47,6 +48,20 @@ class ListCreateInventoryAPIView(ListCreateAPIView):
 class RetrieveUpdateDestroyInventoryAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = InventorySerializer
     queryset = Inventory.objects.all()
+    permission_classes = [IsAuthenticated]#, IsOwnerOrReadOnly]
+
+
+class ListPartnerAPIView(ListAPIView):
+    serializer_class = PartnerSerializer
+    queryset = Partner.objects.all()
+    #lookup_field = 'partner_id'
+    permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
+
+
+class RetrieveUpdateDestroyPartnerAPIView(RetrieveUpdateDestroyAPIView):
+    serializer_class = PartnerSerializer
+    queryset = Partner.objects.all()
+    #lookup_field = 'partner_id'
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
 
 

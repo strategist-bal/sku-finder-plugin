@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication">
-      <change afterPath="$PROJECT_DIR$/api_test1/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_test1/pagination.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_test1/permissions.py" afterDir="false" />
+    <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_test1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_test1/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_test1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_test1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_test1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test1/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sku-finder-plugin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sku-finder-plugin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653297020872</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication">
+      <created>1653308517805</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653308517805</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +130,7 @@
     <MESSAGE value="created model" />
     <MESSAGE value="created model&#10;authentication register api added" />
     <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication" />
   </component>
 </project>
