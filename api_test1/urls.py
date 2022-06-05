@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import RegisterView, ListCreateInventoryAPIView, RetrieveUpdateDestroyInventoryAPIView, \
     ListCreateProductAPIView, RetrieveUpdateDestroyProductAPIView, RetrieveUpdateDestroyPartnerAPIView, \
-    ListPartnerAPIView
+    ListPartnerAPIView, GoogleView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
@@ -14,4 +14,5 @@ urlpatterns = [
     path('product/<int:pk>/', RetrieveUpdateDestroyProductAPIView.as_view(), name='get_delete_update_products'),
     path('partner/', ListPartnerAPIView.as_view(), name='get_partner_details'),
     path('partner/<int:pk>/', RetrieveUpdateDestroyPartnerAPIView.as_view(), name='get_delete_update_partner_details'),
+    path('google/', GoogleView.as_view(), name='google_auth'),
 ]

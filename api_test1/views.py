@@ -17,6 +17,11 @@ from .permissions import IsOwnerOrReadOnly
 from .serializers import InventorySerializer, ProductSerializer, PartnerSerializer
 from .pagination import CustomPagination
 from .filters import InventoryFilter
+from rest_framework.utils import json
+import requests
+from django.contrib.auth.hashers import make_password
+from django.contrib.auth.base_user import BaseUserManager
+from rest_framework_simplejwt.tokens import RefreshToken
 
 
 # Create your views here.
@@ -82,6 +87,35 @@ class RetrieveUpdateDestroyProductAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
     #permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
+
+
+class GoogleView(APIView):
+    def post(self, request):
+        payload = {'access_token': request.data.get("token")}  # validate the token
+        r = requests.get('https://www.googleapis.com/oauth2/v2/userinfo', params=payload)
+        data = json.loads(r.text)
+
+        if 'error' in data:
+            content = {'message': 'wrong google token / this google token is already expired.'}
+            return Response(content)
+
+        # create user if not exist
+        try:
+            partner = Partner.objects.get(email=data['email'])
+        except Partner.DoesNotExist:
+            partner = Partner()
+            partner.username = data['email']
+            # provider random default password
+            partner.password = make_password(BaseUserManager().make_random_password())
+            partner.email = data['email']
+            partner.save()
+
+        token = RefreshToken.for_user(partner)  # generate token without username & password
+        response = {}
+        response['username'] = partner.username
+        response['access_token'] = str(token.access_token)
+        response['refresh_token'] = str(token)
+        return Response(response)
 
 
 
