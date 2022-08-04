@@ -23,7 +23,7 @@ SIMPLE_JWT = {
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-AUTH_USER_MODEL = 'api_test1.Partner'
+AUTH_USER_MODEL = 'partner_inventory.User'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -54,14 +54,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 #   my_apps
-#   'authentication',
-    'api_test1',
+    'partner_inventory',
+    'product_search',#Partner
     'rest_framework',
     'rest_framework_simplejwt',
-    #"allauth",
-    #"allauth.account",
-    #"allauth.socialaccount",
-    #"allauth.socialaccount.providers.google",
 ]
 
 
@@ -142,7 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE =  'Asia/Kolkata'
 
 USE_I18N = True
 
