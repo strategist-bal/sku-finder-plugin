@@ -121,8 +121,18 @@
       <option name="project" value="LOCAL" />
       <updated>1659632481167</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model">
+      <created>1659634803123</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659634803123</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
