@@ -106,10 +106,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mydatabase',
-        'USER': 'root',
-        'PASSWORD': 'fvl@123',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'USER': 'doadmin',
+        'PASSWORD': 'AVNS_yS1r1h_jGofgQ6DBY4l',
+        'HOST': 'sku-finder-plugin-do-user-12196765-0.b.db.ondigitalocean.com',
+        'PORT': '25060',
+        # 'NAME': 'mydatabase',
+        # 'USER': 'root',
+        # 'PASSWORD': 'fvl@123',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '3306',
     }
 }
 
