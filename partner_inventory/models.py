@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import UnicodeUsernameValidator
 from django.contrib.auth.models import UserManager
-from django import forms
 # Create your models here.
 
 
@@ -16,9 +15,9 @@ class Product(models.Model):
         return self.name
 
 
-class Partner(AbstractBaseUser):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+class User(AbstractBaseUser):
+    first_name = models.CharField(max_length=50, null=True)
+    last_name = models.CharField(max_length=50, null=True)
     username_validator = UnicodeUsernameValidator()
     username = models.CharField(
         max_length=150,
@@ -31,14 +30,10 @@ class Partner(AbstractBaseUser):
     )
     email = models.EmailField(max_length=254)
     password = models.CharField(max_length=128)
-    dob = models.DateField()
-    shop_name = models.CharField(max_length=150)
-    category = models.CharField(max_length=100)
-    address_line_1 = models.TextField(max_length=150)
-    address_line_2 = models.TextField(max_length=150)
-    address_line_3 = models.TextField(max_length=150)
-    latitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
-    longitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
+    dob = models.DateField(null=True)
+    is_partner = models.BooleanField('partner status', default=False)
+    is_customer = models.BooleanField('customer status', default=False)
+    is_email_verified = models.BooleanField('email verification status', default=False)
 
     objects=UserManager()
     EMAIL_FIELD = 'email'
@@ -47,6 +42,20 @@ class Partner(AbstractBaseUser):
 
     def __str__(self):
         return self.username
+
+
+class Partner(models.Model):
+    partner = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    shop_name = models.CharField(max_length=150)
+    category = models.CharField(max_length=100)
+    address_line_1 = models.TextField(max_length=150)
+    address_line_2 = models.TextField(max_length=150)
+    address_line_3 = models.TextField(max_length=150)
+    latitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
+    longitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
+
+    def __str__(self):
+        return self.partner
 
 
 class Inventory(models.Model):
