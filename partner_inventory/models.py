@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import UnicodeUsernameValidator
 from django.contrib.auth.models import UserManager
+import uuid
 # Create your models here.
 
 
@@ -16,6 +17,8 @@ class Product(models.Model):
 
 
 class User(AbstractBaseUser):
+    #user_id = models.IntegerField(primary_key=True)
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=50, null=True)
     last_name = models.CharField(max_length=50, null=True)
     username_validator = UnicodeUsernameValidator()
