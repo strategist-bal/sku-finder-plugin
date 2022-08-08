@@ -3,11 +3,14 @@
 #from django.http import HttpResponse
 
 #from django.shortcuts import render
+import datetime
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 #from .serializers import NoteSerializer
 from .models import Partner, User, Inventory, Product
+from product_search.models import Customer
 from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListCreateAPIView, CreateAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django_filters import rest_framework as filters
@@ -83,7 +86,7 @@ class RetrieveUpdateDestroyProductAPIView(RetrieveUpdateDestroyAPIView):
 class GoogleView(APIView):
     def post(self, request):
         payload = {'access_token': request.data.get("token")}  # validate the token
-        r = requests.get('https://www.googleapis.com/oauth2/v2/userinfo', params=payload)
+        r = requests.get('https://www.googleapis.com/oauth2/v1/userinfo', params=payload)
         data = json.loads(r.text)
 
         if 'error' in data:
@@ -95,11 +98,23 @@ class GoogleView(APIView):
             user = User.objects.get(email=data['email'])
         except User.DoesNotExist:
             user = User()
+            user.last_login = datetime.datetime.now()
+            user.first_name = data['given_name']
+            user.last_name = data['family_name']
             user.username = data['email']
+            user.is_partner = request.data.get("is_partner")
+            user.is_customer = request.data.get("is_customer")
+            user.is_email_verified = True
             # provider random default password
             user.password = make_password(BaseUserManager().make_random_password())
             user.email = data['email']
             user.save()
+            if user.is_customer == '1':
+                customer = Customer.objects.create(customer_id=user.id)
+                customer.save()
+            elif user.is_partner == '1':
+                partner = Partner.objects.create(partner_id=user.id)
+                partner.save()
 
         token = RefreshToken.for_user(user)  # generate token without username & password
         response = {}
