@@ -15,4 +15,8 @@ class Migration(migrations.Migration):
             name='uuid',
             field=models.UUIDField(default=uuid.uuid4, editable=False),
         ),
+<<<<<<< HEAD
     ]
+=======
+    ]
+>>>>>>> origin/API_TEST
