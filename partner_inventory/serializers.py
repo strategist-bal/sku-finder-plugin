@@ -34,13 +34,18 @@ class InventorySerializer(serializers.ModelSerializer):  # create class to seria
         fields = ('id', 'product', 'partner', 'available')
 
 
+class UserSerializer(serializers.ModelSerializer):  # create class to serializer user model
+    class Meta:
+        model = User
+        fields = ('id', 'uuid', 'first_name','last_name','username','email','dob','is_email_verified')
+
+
 class PartnerSerializer(serializers.ModelSerializer):  # create class to serializer model
+    partner = UserSerializer()
     class Meta:
         model = Partner
-        #lookup_field = 'partner_id'
-        #fields = '__all__'
-        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'dob', 'shop_name', 'category',
-                  'address_line_1', 'address_line_2', 'address_line_3', 'latitude', 'longitude')
+        fields = ('partner_id', 'partner', 'shop_name', 'category',
+                 'address_line_1', 'address_line_2', 'address_line_3', 'latitude', 'longitude')
 
 
 class ProductSerializer(serializers.ModelSerializer):  # create class to serializer model
@@ -49,9 +54,4 @@ class ProductSerializer(serializers.ModelSerializer):  # create class to seriali
         fields = ('id', 'name', 'description', 'category', 'mrp')
 
 
-class UserSerializer(serializers.ModelSerializer):  # create class to serializer user model
-    inventory = serializers.PrimaryKeyRelatedField(many=True, queryset=Inventory.objects.all())
 
-    class Meta:
-        model = Partner
-        fields = ('id', 'username', 'inventory')

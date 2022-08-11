@@ -107,21 +107,16 @@ WSGI_APPLICATION = 'sku-finder-plugin.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydatabase',
-        'USER': 'doadmin',
-        'PASSWORD': 'AVNS_yS1r1h_jGofgQ6DBY4l',
-        'HOST': 'sku-finder-plugin-do-user-12196765-0.b.db.ondigitalocean.com',
-        'PORT': '25060',
-        'SSLMODE': 'REQUIRED'
-        # 'NAME': 'mydatabase',
-        # 'USER': 'root',
-        # 'PASSWORD': 'fvl@123',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '3306',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'dbmrmo3i70uqnu',
+       'USER': 'izyttcxdfuoxjp',
+       'PASSWORD': '8d1f4411e4a2e57e0e9d0bf3b18d317894f42947239e3312bd193233592825db',
+       'HOST': 'ec2-3-223-169-166.compute-1.amazonaws.com',
+       'PORT': '5432',
+   }
 }
+
 
 
 # Password validation
