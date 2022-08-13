@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations">
-      <change beforePath="$PROJECT_DIR$/partner_inventory/migrations/0004_user_uuid.py" beforeDir="false" afterPath="$PROJECT_DIR$/partner_inventory/migrations/0004_user_uuid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sku-finder-plugin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +50,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Back up/Startup/Django Repository/Polls_App&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Back up/Personal Portfolio/sqlexplorer",
+    "settings.editor.selected.configurable": "configurable.group.language"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -261,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660207157527</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations">
+      <created>1660207325864</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1660207325864</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="UnknownFeatures">
