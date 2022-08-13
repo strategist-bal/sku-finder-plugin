@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations">
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="anujhsrsaini" />
+        <option name="repository" value="sku-finder-plugin" />
+      </RepoCoordinatesHolder>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="28kJ4JLoy4W7EVDlFCIjvKpbJ3X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Back up/Startup/Django Repository/Polls_App&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="" />
+      <created>1651754458763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651754458763</updated>
+    </task>
+    <task id="LOCAL-00001" summary="created model">
+      <created>1652457023614</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652457023614</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created model&#10;authentication register api added">
+      <created>1652599839964</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652599839964</updated>
+    </task>
+    <task id="LOCAL-00003" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication">
+      <created>1653297020872</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653297020872</updated>
+    </task>
+    <task id="LOCAL-00004" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication">
+      <created>1653308517805</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653308517805</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information">
+      <created>1654432297077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654432297077</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added">
+      <created>1654435359384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654435359384</updated>
+    </task>
+    <task id="LOCAL-00007" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints">
+      <created>1654438033662</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654438033662</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model">
+      <created>1659632481167</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659632481167</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model">
+      <created>1659634803123</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659634803123</updated>
+    </task>
+    <task id="LOCAL-00010" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model">
+      <created>1659778175570</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659778175570</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version">
+      <created>1659969152823</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659969152823</updated>
+    </task>
+    <task id="LOCAL-00012" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version">
+      <created>1659969172024</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659969172024</updated>
+    </task>
+    <task id="LOCAL-00013" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project">
+      <created>1659969325000</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1659969325000</updated>
+    </task>
+    <task id="LOCAL-00014" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku">
+      <created>1659975367971</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659975367971</updated>
+    </task>
+    <task id="LOCAL-00015" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key">
+      <created>1659976027375</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1659976027375</updated>
+    </task>
+    <task id="LOCAL-00016" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations">
+      <created>1659977986243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1659977986243</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="API_TEST" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created model" />
+    <MESSAGE value="created model&#10;authentication register api added" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations" />
+  </component>
+</project>
