@@ -1,5 +1,5 @@
 from django_filters import rest_framework as filters
-from .models import Inventory
+from .models import Inventory, Product
 
 
 # We create filters for each field we want to be able to filter on
@@ -13,4 +13,13 @@ class InventoryFilter(filters.FilterSet):
     class Meta:
         model = Inventory
         fields = ['product', 'partner', 'available', 'created_at', 'updated_at']
+
+
+class ProductFilter(filters.FilterSet):
+    name = filters.CharFilter(lookup_expr='icontains')
+    category = filters.CharFilter(lookup_expr='icontains')
+
+    class Meta:
+        model = Product
+        fields = ['id', 'name', 'description', 'category', 'mrp', 'partner']
 

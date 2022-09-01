@@ -6,16 +6,6 @@ import uuid
 # Create your models here.
 
 
-class Product(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField(max_length=5000)
-    category = models.CharField(max_length=20)
-    mrp = models.IntegerField()
-
-    def __str__(self):
-        return self.name
-
-
 class User(AbstractBaseUser):
     #user_id = models.IntegerField(primary_key=True)
     uuid = models.UUIDField(default=uuid.uuid4, editable=False)
@@ -59,6 +49,19 @@ class Partner(models.Model):
 
     def __str__(self):
         return self.partner
+
+
+class Product(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(max_length=5000)
+    category = models.CharField(max_length=20)
+    mrp = models.IntegerField()
+    partner = models.ForeignKey(Partner, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Inventory(models.Model):

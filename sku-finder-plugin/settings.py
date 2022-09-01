@@ -58,8 +58,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 #   my_apps
+    'django_filters',
     'partner_inventory',
-    'product_search',#Partner
+    'product_search',
     'rest_framework',
     'rest_framework_simplejwt',
 ]
