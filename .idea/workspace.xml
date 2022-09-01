@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days">
-      <change afterPath="$PROJECT_DIR$/product_search/urls.py" afterDir="false" />
+    <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days&#10;Filter product list using name search&#10;List only self-owned Inventory">
+      <change afterPath="$PROJECT_DIR$/partner_inventory/migrations/0005_product_created_at_product_partner_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_search/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_search/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partner_inventory/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/partner_inventory/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partner_inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/partner_inventory/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partner_inventory/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/partner_inventory/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partner_inventory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/partner_inventory/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partner_inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/partner_inventory/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_search/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product_search/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_search/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product_search/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sku-finder-plugin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sku-finder-plugin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660391553708</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days&#10;Filter product list using name search&#10;List only self-owned Inventory">
+      <created>1662017530753</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1662017530753</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -336,6 +335,7 @@
     <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key" />
     <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations" />
     <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days" />
-    <option name="LAST_COMMIT_MESSAGE" value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days" />
+    <MESSAGE value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days&#10;Filter product list using name search&#10;List only self-owned Inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days&#10;Filter product list using name search&#10;List only self-owned Inventory" />
   </component>
 </project>
