@@ -37,8 +37,7 @@ AUTH_USER_MODEL = 'partner_inventory.User'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS=['http://localhost:3000']
 CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
