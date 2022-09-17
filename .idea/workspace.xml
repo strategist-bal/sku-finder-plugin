@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd422a7e-4944-4d7f-9a00-8620ffb83045" name="Changes" comment="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days&#10;Filter product list using name search&#10;List only self-owned Inventory&#10;Localhost Allowed">
-      <change beforePath="$PROJECT_DIR$/product_search/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product_search/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sku-finder-plugin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663411890496</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="created model&#10;authentication register api added&#10;simple jwt register/login api added&#10;List Inventory after authentication&#10;Create Product, Inventory after authentication&#10;Edit User Information&#10;Google Authentication added&#10;changed some endpoints&#10;added customer model&#10;Request a specific Python version&#10;Specify the command to run your project&#10;Automatic configuration with django-heroku&#10;Remove a hardcoded Django secret key&#10;Automate remote migrations&#10;Access Token &amp; Refresh Token time set to 90 days&#10;Filter product list using name search&#10;List only self-owned Inventory&#10;Localhost Allowed">
+      <created>1663412028963</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1663412028963</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="UnknownFeatures">
