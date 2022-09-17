@@ -1,5 +1,5 @@
 from django.db import models
-from partner_inventory.models import User, Listing
+from partner_inventory.models import User#, Listing
 
 # Create your models here.
 
