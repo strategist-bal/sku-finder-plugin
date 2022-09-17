@@ -73,3 +73,13 @@ class Inventory(models.Model):
 
     def __str__(self):
         return self.available
+
+
+# class Listing(models.model):
+#     partner = models.ForeignKey(Partner, on_delete=models.CASCADE)
+#     selling_price = models.IntegerField()
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
+#
+#     def __str__(self):
+#         return self.available

@@ -1,5 +1,5 @@
 from django.db import models
-from partner_inventory.models import User
+from partner_inventory.models import User, Listing
 
 # Create your models here.
 
@@ -21,3 +21,14 @@ class Address(models.Model):
     address_line_3 = models.TextField(max_length=150)
     latitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
     longitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
+
+
+# class Cart(models.Model):
+#     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+#     listing = models.ForeignKey(Listing, on_delete=models.CASCADE)
+#     quantity = models.IntegetField()
+#     is_current = 1
+#
+# class Order(models.Model):
+#     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+#     cart = models.ForeignKey(Customer, on_delete=Nothing)
