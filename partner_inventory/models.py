@@ -1,40 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
-from django.contrib.auth.models import UnicodeUsernameValidator
-from django.contrib.auth.models import UserManager
-import uuid
+from users.models import User
 # Create your models here.
-
-
-class User(AbstractBaseUser):
-    #user_id = models.IntegerField(primary_key=True)
-    uuid = models.UUIDField(default=uuid.uuid4, editable=False)
-    first_name = models.CharField(max_length=50, null=True)
-    last_name = models.CharField(max_length=50, null=True)
-    username_validator = UnicodeUsernameValidator()
-    username = models.CharField(
-        max_length=150,
-        unique=True,
-        help_text=('Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.'),
-        validators=[username_validator],
-        error_messages={
-            'unique': ("A user with that username already exists."),
-        },
-    )
-    email = models.EmailField(max_length=254)
-    password = models.CharField(max_length=128)
-    dob = models.DateField(null=True)
-    is_partner = models.BooleanField('partner status', default=False)
-    is_customer = models.BooleanField('customer status', default=False)
-    is_email_verified = models.BooleanField('email verification status', default=False)
-
-    objects=UserManager()
-    EMAIL_FIELD = 'email'
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email']
-
-    def __str__(self):
-        return self.username
 
 
 class Partner(models.Model):
@@ -75,11 +41,12 @@ class Inventory(models.Model):
         return self.available
 
 
-# class Listing(models.model):
-#     partner = models.ForeignKey(Partner, on_delete=models.CASCADE)
-#     selling_price = models.IntegerField()
-#     created_at = models.DateTimeField(auto_now_add=True)
-#     updated_at = models.DateTimeField(auto_now=True)
-#
-#     def __str__(self):
-#         return self.available
+class Listing(models.Model):
+    inventory = models.ForeignKey(Inventory, on_delete=models.CASCADE)
+    partner = models.ForeignKey(Partner, on_delete=models.CASCADE)
+    selling_price = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.partner

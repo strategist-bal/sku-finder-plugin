@@ -1,8 +1,21 @@
 from django_filters import rest_framework as filters
-from .models import Inventory, Product
+from .models import Inventory, Product, Listing
+from django.db.models import Q
 
 
-# We create filters for each field we want to be able to filter on
+class ListingFilterSet(filters.FilterSet):
+    product_name = filters.CharFilter(method='qfilter')
+
+    class Meta:
+        model = Listing
+        fields = ['id', 'selling_price', 'partner_id', 'inventory', 'partner']
+
+    def qfilter(self, queryset, name, value):
+        squery = Q(inventory__product__name__icontains=value)
+
+        return queryset.filter(squery)
+
+
 class InventoryFilter(filters.FilterSet):
     product = filters.CharFilter(lookup_expr='icontains')
     partner = filters.CharFilter(lookup_expr='icontains')

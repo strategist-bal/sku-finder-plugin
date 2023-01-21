@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Partner, User
-from .models import Inventory, Product
+from .models import Inventory, Product, Listing
 from product_search.models import Customer
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
@@ -63,3 +63,12 @@ class InventorySerializer(serializers.ModelSerializer):  # create class to seria
     class Meta:
         model = Inventory
         fields = ('id', 'product_id', 'partner_id', 'partner', 'available', 'product')
+
+
+class ListingSerializer(serializers.ModelSerializer):
+    partner = serializers.ReadOnlyField(source='partner.id')
+    inventory = InventorySerializer()
+
+    class Meta:
+        model = Listing
+        fields = ('id', 'selling_price', 'partner_id', 'inventory', 'partner')

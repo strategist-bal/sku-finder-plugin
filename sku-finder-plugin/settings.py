@@ -11,36 +11,49 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import datetime
 from datetime import timedelta
 
-from decouple import config
+import environ
+env = environ.Env(
+    DEBUG=(int, 0)
+)
+# reading .env file
+environ.Env.read_env('.env')
 
-SECRET_KEY = config('SECRET_KEY')
-
-SIMPLE_JWT = {
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=90),
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=90),
-    'ROTATE_REFRESH_TOKENS': True,
+# JWT settings
+JWT_EXPIRATION_DELTA_DEFAULT = 2.628e+6  # 1 month in seconds
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(
+        seconds=env.int(
+            'DJANGO_JWT_EXPIRATION_DELTA',
+            default=JWT_EXPIRATION_DELTA_DEFAULT
+        )
+    ),
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',
+    'JWT_GET_USER_SECRET_KEY': lambda user: user.secret_key,
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.selectors.jwt_response_payload_handler',
+    'JWT_AUTH_COOKIE': 'jwt_token',
+    'JWT_AUTH_COOKIE_SAMESITE': 'None'
 }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-AUTH_USER_MODEL = 'partner_inventory.User'
+AUTH_USER_MODEL = 'users.User'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-cm&o)mbro%bl&u_h^p254k6*85byjl*bk9edv2^xu=9y@0qt)='
+SECRET_KEY = 'django-insecure-cm&o)mbro%bl&u_h^p254k6*85byjl*bk9edv2^xu=9y@0qt)='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+BASE_BACKEND_URL = 'http://localhost:8000'
+BASE_FRONTEND_URL = 'http://localhost:3000'
+
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
     ),
@@ -58,10 +71,17 @@ INSTALLED_APPS = [
     'corsheaders',
 #   my_apps
     'django_filters',
+    'django_extensions',
     'partner_inventory',
     'product_search',
     'rest_framework',
-    'rest_framework_simplejwt',
+
+    'rest_framework.authtoken',
+
+    'rest_framework_jwt',
+    'rest_framework_jwt.blacklist',
+
+    'users',
 ]
 
 
@@ -110,10 +130,10 @@ WSGI_APPLICATION = 'sku-finder-plugin.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'dbmrmo3i70uqnu',
-       'USER': 'izyttcxdfuoxjp',
-       'PASSWORD': '8d1f4411e4a2e57e0e9d0bf3b18d317894f42947239e3312bd193233592825db',
-       'HOST': 'ec2-3-223-169-166.compute-1.amazonaws.com',
+       'NAME': 'postgres',
+       'USER': 'postgres',
+       'PASSWORD': 'password',
+       'HOST': 'localhost',
        'PORT': '5432',
    }
 }
@@ -161,10 +181,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS=['*']
-CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
 
-import django_heroku
-django_heroku.settings(locals())
+GOOGLE_OAUTH2_CLIENT_ID = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_ID')
+GOOGLE_OAUTH2_CLIENT_SECRET = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_SECRET')
 
 
