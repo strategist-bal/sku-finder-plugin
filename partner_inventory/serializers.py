@@ -47,6 +47,20 @@ class UserSerializer(serializers.ModelSerializer):  # create class to serializer
         model = User
         fields = ('uuid', 'first_name', 'last_name', 'username', 'email', 'dob', 'is_email_verified', 'partner')
 
+    def update(self, instance, validated_data):
+        partner_serializer = self.fields['partner']
+        partner_instance = instance.partner
+        partner_data = validated_data.pop('partner', {})
+
+        # to access the partner fields in here
+        # mobile = partner_data.get('mobile')
+
+        # update the partner fields
+        partner_serializer.update(partner_instance, partner_data)
+
+        instance = super().update(instance, validated_data)
+        return instance
+
 
 class ProductSerializer(serializers.ModelSerializer):  # create class to serializer model
     partner = serializers.ReadOnlyField(source='partner.id')
