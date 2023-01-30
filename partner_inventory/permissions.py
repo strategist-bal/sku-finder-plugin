@@ -15,3 +15,13 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
         # Write permissions are only allowed to the creator of the movie
         return obj.id == request.user.id
+
+
+class IsOwner(permissions.BasePermission):
+    """
+    Custom permission to only allow creator of an object to edit it.
+    """
+
+    def has_object_permission(self, request, view, obj):
+        # Read/Write permissions are only allowed to the creator of the movie
+        return obj.id == request.user.id

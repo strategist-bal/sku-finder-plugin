@@ -1,10 +1,10 @@
 from django.urls import path, include
 
-from auth.apis import LoginApi, GoogleLoginApi, LogoutApi
+from auth.apis import LoginApi, PartnerGoogleLoginApi, LogoutApi
 
 login_patterns = [
     path('', LoginApi.as_view(), name='login'),
-    path('google/', GoogleLoginApi.as_view(), name='login-with-google'),
+    path('google/', PartnerGoogleLoginApi.as_view(), name='login-with-google'),
 ]
 
 urlpatterns = [

@@ -2,18 +2,17 @@ import datetime
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Partner, Inventory, Product, Listing
+from .models import Partner, Inventory, Product
 from users.models import User
 from product_search.models import Customer
 from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListCreateAPIView, CreateAPIView, ListAPIView, \
     RetrieveUpdateAPIView
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django_filters import rest_framework as filters
-from .permissions import IsOwnerOrReadOnly
-from .serializers import InventorySerializer, ProductSerializer, PartnerSerializer, RegisterSerializer, UserSerializer, \
-    ListingSerializer
+from .permissions import IsOwnerOrReadOnly, IsOwner
+from .serializers import InventorySerializer, ProductSerializer, PartnerSerializer, UserSerializer
 from .pagination import CustomPagination
-from .filters import InventoryFilter, ProductFilter, ListingFilterSet
+from .filters import InventoryFilter, ProductFilter
 from rest_framework.utils import json
 import requests
 from django.contrib.auth.hashers import make_password
@@ -28,30 +27,13 @@ from api.mixins import ApiErrorsMixin, ApiAuthMixin, PublicApiMixin
 import os
 
 
-class ListCreateListingView(ApiAuthMixin, ApiErrorsMixin, ListCreateAPIView):
-    serializer_class = ListingSerializer
-    queryset = Listing.objects.select_related('inventory').all()
-    #permission_classes = [IsAuthenticated]
-    filterset_class = ListingFilterSet
-
-    def post(self, request):
-        listing = Listing.objects.create(inventory_id=request.data.get("inventory_id"), partner_id=self.request.user.id , \
-                                         selling_price=request.data.get("selling_price"))
-        listing.save()
-
-        response = {}
-        response['inventory_id'] = listing.inventory_id
-        response['selling_price'] = listing.selling_price
-        return Response(response)
+class ListPartnerView(ApiAuthMixin, ApiErrorsMixin, ListAPIView):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
+    permission_classes = [IsAuthenticated, IsOwner]
 
     def get_queryset(self):
-        return Listing.objects.filter(partner_id=self.request.user.id)
-
-
-class RegisterView(CreateAPIView):
-    queryset = User.objects.all()
-    permission_classes = (AllowAny,)
-    serializer_class = RegisterSerializer
+        return User.objects.filter(id=self.request.user.id)
 
 
 class UpdatePartnerView(ApiAuthMixin, ApiErrorsMixin, RetrieveUpdateAPIView):
@@ -63,22 +45,35 @@ class UpdatePartnerView(ApiAuthMixin, ApiErrorsMixin, RetrieveUpdateAPIView):
 
 class ListCreateInventoryAPIView(ApiAuthMixin, ApiErrorsMixin, ListCreateAPIView):
     serializer_class = InventorySerializer
-    queryset = Inventory.objects.all()
     #permission_classes = [IsAuthenticated]
-    filter_backends = (filters.DjangoFilterBackend,)
-    filterset_class = InventoryFilter
+    #filter_backends = (filters.DjangoFilterBackend,)
+    #filterset_class = InventoryFilter
+    pagination_class = CustomPagination
+    # filterset_fields  = ['product','product__name']
 
     def post(self, request):
-        inventory = Inventory.objects.create(product_id=request.data.get("product_id"), partner_id=self.request.user.id, available = request.data.get("available"))
+        inventory = Inventory.objects.create(product_id=request.data.get("product_id"), partner_id=self.request.user.id,
+                                             available = request.data.get("available"), selling_price=request.data.get("selling_price"))
         inventory.save()
 
         response = {}
         response['product_id'] = inventory.product_id
         response['available'] = inventory.available
+        response['selling_price'] = inventory.selling_price
         return Response(response)
 
     def get_queryset(self):
-        return Inventory.objects.filter(partner_id=self.request.user.id)
+        queryset = Inventory.objects.filter(partner_id=self.request.user.id)
+        product_name = self.request.query_params.get('name')
+        category = self.request.query_params.get('category')
+
+        if product_name:
+            queryset = queryset.filter(product__name__icontains=product_name)
+        elif category:
+            queryset = queryset.filter(product__category=category)
+
+        return queryset
+
 
 
 class RetrieveUpdateDestroyInventoryAPIView(ApiAuthMixin, ApiErrorsMixin, RetrieveUpdateDestroyAPIView):
@@ -103,10 +98,9 @@ class ListCreateProductAPIView(ApiAuthMixin, ApiErrorsMixin, ListCreateAPIView):
         print(self.request.user.is_authenticated)
         print(self.request.user.id)
         product.save()
-        inventory = Inventory.objects.create(product_id=product.id, available=0, partner_id = self.request.user.id)
-        inventory.save()
 
         response = {}
+        response['product_id'] = product.id
         response['name'] = product.name
         response['description'] = product.description
         response['category'] = product.category

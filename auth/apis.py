@@ -29,7 +29,7 @@ class LoginApi(ApiErrorsMixin, ObtainJSONWebTokenView):
         return super().post(request, *args, **kwargs)
 
 
-class GoogleLoginApi(PublicApiMixin, ApiErrorsMixin, APIView):
+class PartnerGoogleLoginApi(PublicApiMixin, ApiErrorsMixin, APIView):
     class InputSerializer(serializers.Serializer):
         code = serializers.CharField(required=False)
         error = serializers.CharField(required=False)
@@ -59,10 +59,12 @@ class GoogleLoginApi(PublicApiMixin, ApiErrorsMixin, APIView):
 
         profile_data = {
             'email': user_data['email'],
-            'first_name': user_data.get('givenName', 'A'),
-            'last_name': user_data.get('familyName', 'B'),
+            'first_name': user_data['given_name'],
+            'last_name': user_data['family_name'],
             'username': user_data['email'],
-            'dob': '2022-10-01',
+            'is_email_verified': True,
+            'is_partner': True
+            #'dob': ,
         }
 
         # We use get-or-create logic here for the sake of the example.

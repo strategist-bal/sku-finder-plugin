@@ -6,14 +6,15 @@ from django.core.management.utils import get_random_secret_key
 from utils import get_now
 
 from users.models import User
+from partner_inventory.models import Partner
+from product_search.models import Customer
 
 
-def user_create(email, password=None, **extra_fields) -> User:
+def user_create(email, is_partner=False, is_customer=False, password=None, **extra_fields) -> User:
     extra_fields = {
         **extra_fields
     }
-
-    user = User(email=email, **extra_fields)
+    user = User(email=email, is_partner=is_partner, is_customer=is_customer, **extra_fields)
 
     if password:
         user.set_password(password)
@@ -22,6 +23,12 @@ def user_create(email, password=None, **extra_fields) -> User:
 
     user.full_clean()
     user.save()
+
+    if is_partner:
+        Partner(partner_id=user.id).save()
+
+    if is_customer:
+        Customer(customer_id=user.id).save()
 
     return user
 

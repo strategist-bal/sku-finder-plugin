@@ -23,10 +23,12 @@ class User(AbstractBaseUser):
     )
     email = models.EmailField(max_length=254)
     password = models.CharField(max_length=128)
-    dob = models.DateField(null=True)
+    dob = models.DateField(blank=True, null=True)
     is_partner = models.BooleanField('partner status', default=False)
     is_customer = models.BooleanField('customer status', default=False)
     is_email_verified = models.BooleanField('email verification status', default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     objects=UserManager()
     EMAIL_FIELD = 'email'
