@@ -12,7 +12,7 @@ class Partner(models.Model):
     address_line_2 = models.TextField(max_length=100, blank=True, null=True)
     city_town = models.TextField(max_length=35, blank=True, null=True)
     province_region_state = models.TextField(max_length=50, blank=True, null=True)
-    zip_code = models.IntegerField(max_length=6, blank=True, null=True)
+    zip_code = models.IntegerField(blank=True, null=True)
     latitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
     longitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
