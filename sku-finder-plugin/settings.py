@@ -106,7 +106,7 @@ DEBUG = True
 
 BASE_BACKEND_URL = 'http://ec2-13-232-203-136.ap-south-1.compute.amazonaws.com'
 #BASE_BACKEND_URL = 'http://localhost:8000'
-BASE_FRONTEND_URL = 'http://localhost:3000'
+BASE_FRONTEND_URL = 'https://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
@@ -239,7 +239,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1','15.207.214.115','13.232.203.136','http://13.232.203.136','http://13.232.203.136:8000']
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136','https://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/']
 
 GOOGLE_OAUTH2_CLIENT_ID = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_ID')
 
