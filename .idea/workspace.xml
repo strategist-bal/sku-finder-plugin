@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89ffd653-3035-4c82-ae1e-d09333095d83" name="Changes" comment="try2">
+    <list default="true" id="89ffd653-3035-4c82-ae1e-d09333095d83" name="Changes" comment="try3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth/apis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth/services.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676356768918</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="try3">
+      <created>1676357295707</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676357295707</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +156,7 @@
     <MESSAGE value="To push to AWS First time" />
     <MESSAGE value="try1" />
     <MESSAGE value="try2" />
-    <option name="LAST_COMMIT_MESSAGE" value="try2" />
+    <MESSAGE value="try3" />
+    <option name="LAST_COMMIT_MESSAGE" value="try3" />
   </component>
 </project>
