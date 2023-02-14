@@ -52,6 +52,7 @@ class PartnerGoogleLoginApi(PublicApiMixin, ApiErrorsMixin, APIView):
         domain = settings.BASE_BACKEND_URL
         api_uri = reverse('api:v1:auth:login-with-google')
         redirect_uri = f'{domain}{api_uri}'
+        print(redirect_uri)
 
         access_token = google_get_access_token(code=code, redirect_uri=redirect_uri)
 
