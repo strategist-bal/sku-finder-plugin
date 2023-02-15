@@ -241,12 +241,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
-# CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
-#     ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/']
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
-#     ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/'
-# ]
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
+    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/']
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
+    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/'
+]
 
 
 GOOGLE_OAUTH2_CLIENT_ID = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_ID')
