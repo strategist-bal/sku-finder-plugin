@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89ffd653-3035-4c82-ae1e-d09333095d83" name="Changes" comment="try13">
+    <list default="true" id="89ffd653-3035-4c82-ae1e-d09333095d83" name="Changes" comment="try14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sku-finder-plugin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sku-finder-plugin/settings.py" afterDir="false" />
     </list>
@@ -209,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676436737638</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="try14">
+      <created>1676439520777</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676439520777</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -228,6 +235,7 @@
     <MESSAGE value="try11" />
     <MESSAGE value="try12" />
     <MESSAGE value="try13" />
-    <option name="LAST_COMMIT_MESSAGE" value="try13" />
+    <MESSAGE value="try14" />
+    <option name="LAST_COMMIT_MESSAGE" value="try14" />
   </component>
 </project>
