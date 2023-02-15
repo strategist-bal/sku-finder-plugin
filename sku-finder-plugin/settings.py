@@ -106,7 +106,7 @@ DEBUG = True
 
 BASE_BACKEND_URL = 'http://ec2-13-232-203-136.ap-south-1.compute.amazonaws.com'
 #BASE_BACKEND_URL = 'http://localhost:8000'
-BASE_FRONTEND_URL = 'https://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
+BASE_FRONTEND_URL = 'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
