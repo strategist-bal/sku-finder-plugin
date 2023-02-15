@@ -88,7 +88,9 @@ JWT_AUTH = {
     'JWT_GET_USER_SECRET_KEY': lambda user: user.secret_key,
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.selectors.jwt_response_payload_handler',
     'JWT_AUTH_COOKIE': 'jwt_token',
-    'JWT_AUTH_COOKIE_SAMESITE': 'None'
+    'JWT_AUTH_COOKIE_SECURE': False,
+    'JWT_AUTH_COOKIE_SAMESITE': 'Lax'
+
 }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -106,6 +108,7 @@ DEBUG = True
 
 BASE_BACKEND_URL = 'http://ec2-13-232-203-136.ap-south-1.compute.amazonaws.com'
 #BASE_BACKEND_URL = 'http://localhost:8000'
+#BASE_FRONTEND_URL = 'http://localhost:3000'
 BASE_FRONTEND_URL = 'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
 
 REST_FRAMEWORK = {
@@ -245,7 +248,7 @@ CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://15.207.214.115','http:/
     ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/']
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
-    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/'
+    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
 ]
 
 
