@@ -250,7 +250,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
     ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
 ]
-
+CSRF_TRUSTED_ORIGINS = ['http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com']
 
 GOOGLE_OAUTH2_CLIENT_ID = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_ID')
 
