@@ -106,10 +106,10 @@ SECRET_KEY = 'django-insecure-cm&o)mbro%bl&u_h^p254k6*85byjl*bk9edv2^xu=9y@0qt)=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-BASE_BACKEND_URL = 'http://ec2-13-232-203-136.ap-south-1.compute.amazonaws.com'
+BASE_BACKEND_URL = 'http://api.apnabaazar.in'
 #BASE_BACKEND_URL = 'http://localhost:8000'
 #BASE_FRONTEND_URL = 'http://localhost:3000'
-BASE_FRONTEND_URL = 'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
+BASE_FRONTEND_URL = 'http://www.apnabaazar.in'
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
@@ -245,10 +245,11 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
-    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/']
+    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com/'\
+                         ,'http://www.apnabaazar.in/']
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
-    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com'
+    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://www.apnabaazar.in/'
 ]
 CSRF_TRUSTED_ORIGINS = ['http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com']
 
