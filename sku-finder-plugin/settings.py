@@ -109,7 +109,7 @@ DEBUG = True
 BASE_BACKEND_URL = 'http://api.apnabaazar.in'
 #BASE_BACKEND_URL = 'http://localhost:8000'
 #BASE_FRONTEND_URL = 'http://localhost:3000'
-BASE_FRONTEND_URL = 'http://www.apnabaazar.in'
+BASE_FRONTEND_URL = 'http://seller.apnabaazar.in'
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
