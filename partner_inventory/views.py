@@ -86,7 +86,7 @@ class GetPresignedImageUrl(ApiAuthMixin, ApiErrorsMixin, CreateAPIView):
             's3',
             aws_access_key_id=settings.ACCESS_KEY,
             aws_secret_access_key=settings.SECRET_KEY,
-            region='ap-south-1'
+            region_name='ap-south-1'
         )
         client_action = 'get_object' if request.data.get("action") == 'get' else 'put_object'
         key = str(self.request.user.uuid) + "/" + str(uuid.uuid4()) + "." + request.data.get("type").split("/")[1]
