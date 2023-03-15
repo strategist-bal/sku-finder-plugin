@@ -52,4 +52,4 @@ class InventorySerializer(serializers.ModelSerializer):  # create class to seria
 
     class Meta:
         model = Inventory
-        fields = ('id', 'product_id', 'partner_id', 'partner', 'available', 'selling_price', 'product')
+        fields = ('id', 'product_id', 'partner_id', 'partner', 'available', 'selling_price', 'product', 'image_url')

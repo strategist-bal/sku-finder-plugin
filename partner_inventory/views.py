@@ -25,6 +25,9 @@ from django.conf import settings
 from django.shortcuts import redirect
 from api.mixins import ApiErrorsMixin, ApiAuthMixin, PublicApiMixin
 import os
+from api.product_image import generate_presigned_url
+import boto3
+import uuid
 
 
 class ListPartnerView(ApiAuthMixin, ApiErrorsMixin, ListAPIView):
@@ -53,7 +56,8 @@ class ListCreateInventoryAPIView(ApiAuthMixin, ApiErrorsMixin, ListCreateAPIView
 
     def post(self, request):
         inventory = Inventory.objects.create(product_id=request.data.get("product_id"), partner_id=self.request.user.id,
-                                             available = request.data.get("available"), selling_price=request.data.get("selling_price"))
+                                             available = request.data.get("available"), selling_price=request.data.get("selling_price"),
+                                             image_url=request.data.get("image_url"))
         inventory.save()
 
         response = {}
@@ -74,6 +78,21 @@ class ListCreateInventoryAPIView(ApiAuthMixin, ApiErrorsMixin, ListCreateAPIView
 
         return queryset
 
+
+class GetPresignedImageUrl(ApiAuthMixin, ApiErrorsMixin, CreateAPIView):
+
+    def post(self, request):
+        s3_client = boto3.client('s3')
+        client_action = 'get_object' if request.data.get("action") == 'get' else 'put_object'
+        key = str(self.request.user.uuid) + "/" + str(uuid.uuid4()) + "." + request.data.get("type").split("/")[1]
+        url = generate_presigned_url(
+            s3_client, client_action, {'Bucket': settings.BUCKET, 'Key': key,'ACL':"public-read"}, 9000)
+
+        response = {}
+        response['key'] = key
+        response['presigned_imageurl'] = url
+        response['access_url'] = "https://s3.ap-south-1.amazonaws.com/"+settings.BUCKET+"/"+key
+        return Response(response)
 
 
 class RetrieveUpdateDestroyInventoryAPIView(ApiAuthMixin, ApiErrorsMixin, RetrieveUpdateDestroyAPIView):

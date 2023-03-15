@@ -107,8 +107,8 @@ SECRET_KEY = 'django-insecure-cm&o)mbro%bl&u_h^p254k6*85byjl*bk9edv2^xu=9y@0qt)=
 DEBUG = True
 
 BASE_BACKEND_URL = 'http://api.apnabaazar.in'
-#BASE_BACKEND_URL = 'http://localhost:8000'
-#BASE_FRONTEND_URL = 'http://localhost:3000'
+# BASE_BACKEND_URL = 'http://localhost:8000'
+# BASE_FRONTEND_URL = 'http://localhost:3000'
 BASE_FRONTEND_URL = 'http://seller.apnabaazar.in'
 
 REST_FRAMEWORK = {
@@ -249,12 +249,14 @@ CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://15.207.214.115','http:/
                          ,'http://www.apnabaazar.in/']
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000','http://15.207.214.115','http://13.232.203.136:8000','http://13.232.203.136'\
-    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://www.apnabaazar.in/'
+    ,'http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com','http://www.apnabaazar.in'
 ]
 CSRF_TRUSTED_ORIGINS = ['http://apna-bazaar-frontend.s3-website.ap-south-1.amazonaws.com']
 
 GOOGLE_OAUTH2_CLIENT_ID = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_ID')
 
 GOOGLE_OAUTH2_CLIENT_SECRET = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_SECRET')
+
+BUCKET = env.str('BUCKET')
 
 

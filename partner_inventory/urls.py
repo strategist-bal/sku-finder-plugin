@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import ListCreateInventoryAPIView, RetrieveUpdateDestroyInventoryAPIView, \
     ListCreateProductAPIView, RetrieveUpdateDestroyProductAPIView, UpdatePartnerView, \
-    ListPartnerView
+    ListPartnerView, GetPresignedImageUrl
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
@@ -15,4 +15,5 @@ urlpatterns = [
     path('product/', ListCreateProductAPIView.as_view(), name='get_post_products'),
     path('product/<int:pk>/', RetrieveUpdateDestroyProductAPIView.as_view(), name='get_delete_update_products'),
     #path('listing/', ListCreateListingView.as_view(), name='get_post_listing'),
+    path('image/presigned_url/', GetPresignedImageUrl.as_view(), name='getpresignedurl'),
 ]
