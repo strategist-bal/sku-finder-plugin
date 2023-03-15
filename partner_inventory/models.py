@@ -46,3 +46,6 @@ class Inventory(models.Model):
 
     def __str__(self):
         return self.available
+
+    class Meta:
+        ordering = ['id']
