@@ -82,7 +82,10 @@ class ListCreateInventoryAPIView(ApiAuthMixin, ApiErrorsMixin, ListCreateAPIView
 class GetPresignedImageUrl(ApiAuthMixin, ApiErrorsMixin, CreateAPIView):
 
     def post(self, request):
-        s3_client = boto3.client('s3')
+        s3_client = boto3.client(
+            's3',
+            aws_access_key_id=settings.ACCESS_KEY,
+            aws_secret_access_key=settings.SECRET_KEY)
         client_action = 'get_object' if request.data.get("action") == 'get' else 'put_object'
         key = str(self.request.user.uuid) + "/" + str(uuid.uuid4()) + "." + request.data.get("type").split("/")[1]
         url = generate_presigned_url(

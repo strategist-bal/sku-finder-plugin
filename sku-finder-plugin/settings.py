@@ -107,9 +107,10 @@ SECRET_KEY = 'django-insecure-cm&o)mbro%bl&u_h^p254k6*85byjl*bk9edv2^xu=9y@0qt)=
 DEBUG = True
 
 BASE_BACKEND_URL = 'http://api.apnabaazar.in'
+BASE_FRONTEND_URL = 'http://seller.apnabaazar.in'
 # BASE_BACKEND_URL = 'http://localhost:8000'
 # BASE_FRONTEND_URL = 'http://localhost:3000'
-BASE_FRONTEND_URL = 'http://seller.apnabaazar.in'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
@@ -258,5 +259,5 @@ GOOGLE_OAUTH2_CLIENT_ID = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_ID')
 GOOGLE_OAUTH2_CLIENT_SECRET = env.str('DJANGO_GOOGLE_OAUTH2_CLIENT_SECRET')
 
 BUCKET = env.str('BUCKET')
-
-
+ACCESS_KEY = env.str('ACCESS_KEY')
+SECRET_KEY = env.str('SECRET_KEY')
